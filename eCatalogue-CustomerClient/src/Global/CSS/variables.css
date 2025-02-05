@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #1b1b1b;
+  --secondary-color: #2a2b2d;
+  --background-color: #1f1f1f;
+  --third-color: #36373a;
+  --text-color: #cacbce;
+  --border-color: rgba(255, 255, 255, 0.25);
+
+  --primary-font: "Playfair Display", serif;
+}

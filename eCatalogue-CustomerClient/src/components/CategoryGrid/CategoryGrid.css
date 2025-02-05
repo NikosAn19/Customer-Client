@@ -1,0 +1,12 @@
+@import url("../../Global/CSS/variables.css");
+
+.categoryGrid-container {
+  position: absolute;
+  top: 20%;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr); /* 2 στήλες */
+  gap: 16px; /* Απόσταση μεταξύ των καρτών */
+  padding: 16px;
+  box-sizing: border-box;
+}
