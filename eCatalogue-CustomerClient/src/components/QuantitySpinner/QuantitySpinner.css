@@ -1,0 +1,26 @@
+@import url("../../Global/CSS/variables.css");
+.quantity-spinner {
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.quantity-spinner button {
+  background: var(--background-color);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.quantity-value {
+  min-width: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+}

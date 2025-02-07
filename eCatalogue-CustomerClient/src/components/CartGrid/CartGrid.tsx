@@ -1,5 +1,5 @@
-import CategoryCard from "../CategoryCard/CategoryCard";
-import "./CategoryGrid.css";
+import "./CartGrid.css";
+
 import { useNavigate } from "react-router-dom";
 
 // Δείγμα δεδομένων. Θα μπορούσαν να έρχονται κι από API.
@@ -7,6 +7,7 @@ import appetizers from "../../assets/MenuImages/appetizers.jpg";
 import pizza from "../../assets/MenuImages/pizza.jpg";
 import coffee from "../../assets/MenuImages/coffee.jpeg";
 import softDrinks from "../../assets/MenuImages/soft-drinks.jpg";
+import CartProductCard from "../CartProductCard/CartProductCard";
 
 const categoriesData = [
   { id: 1, name: "Appetizers", image: appetizers, items: 11 },
@@ -16,22 +17,15 @@ const categoriesData = [
   // ... όσες κατηγορίες θες
 ];
 
-export default function CategoryGrid() {
-  const navigate = useNavigate();
-
-  const handleNavigate = (category: string) => {
-    // Κάνουμε navigate στο route "/category-products" και περνάμε το category name στο state
-    navigate("/category-products", { state: { categoryName: category } });
-  };
+export default function CartGrid() {
   return (
-    <div className="categoryGrid-container">
+    <div className="cartGrid-container">
       {categoriesData.map((category) => (
-        <CategoryCard
+        <CartProductCard
           key={category.id}
           name={category.name}
           image={category.image}
           items={category.items}
-          onClick={() => handleNavigate(category.name)}
         />
       ))}
     </div>
